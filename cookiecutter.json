@@ -1,0 +1,5 @@
+{
+  "name": "cookiecutter-heroku-flask",
+  "runtime": "3.6.9",
+  "url": "https://github.com/zehengl/cookiecutter-heroku-flask"
+}
