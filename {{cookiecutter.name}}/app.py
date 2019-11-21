@@ -1,19 +1,23 @@
+import os
+
 from flask import Flask, render_template, request
+from flask_bootstrap import Bootstrap
 from whitenoise import WhiteNoise
 
+from forms import SomeForm
+
 app = Flask(__name__)
+Bootstrap(app)
 app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "SECRET_KEY")
+app.config["BOOTSTRAP_SERVE_LOCAL"] = True
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["get", "post"])
 def index():
-    if request.method == "POST":
-        input1 = request.form["input1"]
-        input2 = request.form["input2"]
-        output = f"Input1={input1} Input2={input2}"
-        return output
-    else:
-        return render_template("index.html")
+    form = SomeForm(request.form)
+
+    return render_template("index.html", form=form)
 
 
 if __name__ == "__main__":

@@ -1,26 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="static/favicon.png" />
-    <title>{{ cookiecutter.name }}</title>
-  </head>
-  <body>
+{% raw %} {% extends "bootstrap/base.html" %} {% endraw %}
+
+{% raw %}
+{% block head %}
+  {{ super() }}
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='favicon.png') }}"
+  />
+{% endblock %}
+{% endraw %}
+
+{% raw %}{% block title %}{% endraw %} {{ cookiecutter.name }} {% raw %}{% endblock %}{% endraw %}
+
+{% raw %}{% block content %}{% endraw %}
+  <div style="display: flex; min-height:100vh; flex-direction:column; flex: 1">
     <div class="container">
       <div class="jumbotron">
         <h1 class="display-4">
-          <span><img src="static/favicon.png" width="64" height="64"/></span>
+          <span>
+            <img
+              src="{% raw %}{{ url_for('static', filename='favicon.png') }}{% endraw %}"
+              width="64"
+              height="64"
+            />
+          </span>
           {{ cookiecutter.name }}
         </h1>
         <p class="lead">
@@ -32,47 +35,16 @@
           <a href="{{ cookiecutter.url }}">{{ cookiecutter.url }}</a>
         </p>
       </div>
-      <form method="post">
-        <div class="form-group">
-          <label for="input1"><strong>Input1</strong></label>
-          <input
-            type="text"
-            id="input1"
-            name="input1"
-            class="form-control"
-            placeholder="Start typing..."
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="input2"><strong>Input2</strong></label>
-          <input
-            type="text"
-            id="input2"
-            name="input2"
-            class="form-control"
-            placeholder="Start typing..."
-            required
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
     </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+    <div class="container">
+      {% raw %}{% include 'some_form.html' %}{% endraw %}
+    </div>
+  </div>
+  <footer class="footer" style="padding: 1rem">
+    <div class="container">
+      <span class="text-muted">
+        &copy; Copyright {{ cookiecutter.copyright_year }} by {{ cookiecutter.author }}
+      </span>
+    </div>
+  </footer>
+{% raw %}{% endblock %}{% endraw %}
