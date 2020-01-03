@@ -1,8 +1,12 @@
 # cookiecutter-heroku-flask
 
-A cookiecutter template for Heroku Flask apps.
-
 [![time tracker](https://wakatime.com/badge/github/zehengl/cookiecutter-heroku-flask.svg)](https://wakatime.com/badge/github/zehengl/cookiecutter-heroku-flask)
+
+A cookiecutter template for Heroku Flask apps
+
+## Prerequisites
+
+- Git
 
 ## Usage
 
