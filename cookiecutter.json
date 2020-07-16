@@ -1,7 +1,8 @@
 {
   "name": "cookiecutter-heroku-flask",
-  "runtime": "3.7.6",
+  "runtime": "3.7.8",
   "author": "Zeheng Li",
-  "copyright_year": 2020,
-  "url": "https://github.com/zehengl/cookiecutter-heroku-flask"
+  "copyright_year": "{% now 'utc', '%Y' %}",
+  "url": "https://github.com/zehengl/cookiecutter-heroku-flask",
+  "_extensions": ["jinja2_time.TimeExtension"]
 }
