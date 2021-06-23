@@ -41,10 +41,4 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
     pip install -r requirements.txt
     python app.py
 
-<hr>
-
-<sup>
-
 ## Credits
-
-</sup>
