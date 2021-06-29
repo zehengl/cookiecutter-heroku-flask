@@ -17,7 +17,10 @@ A cookiecutter template for Heroku Flask apps
 
 ## Credits
 
+- [Logo][3] by [Andika .][4]
 - Default [Icon][1] by [Good Stuff No Nonsense][2]
 
 [1]: https://www.iconfinder.com/icons/811462/information_mark_question_sign_icon
 [2]: https://www.iconfinder.com/Field5
+[3]: https://www.iconfinder.com/icons/5241573/bakery_christmas_cookie_cupcake_pastry_winter_icon
+[4]: https://www.iconfinder.com/Sinkandika
