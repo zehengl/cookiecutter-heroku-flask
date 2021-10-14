@@ -1,6 +1,6 @@
 {
   "name": "cookiecutter-heroku-flask",
-  "runtime": "3.9.5",
+  "runtime": "3.9.7",
   "author": "Zeheng Li",
   "copyright_year": "{% now 'utc', '%Y' %}",
   "url": "https://github.com/zehengl/cookiecutter-heroku-flask",
