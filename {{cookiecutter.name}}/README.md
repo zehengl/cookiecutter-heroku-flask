@@ -12,7 +12,7 @@
 
 - Python {{cookiecutter.runtime}}
 
-## Usage
+## Getting Started
 
 1. create virtualenv
 2. activate virtualenv
@@ -28,7 +28,7 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
 ### Windows
 
     python -m venv .venv
-    .\.venv\Scripts\activate
+    .venv\Scripts\activate
     python -m pip install -U pip
     pip install -r requirements.txt
     python app.py

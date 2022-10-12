@@ -23,10 +23,6 @@ Use virtual environment and set up development dependencies.
     .\.venv\Scripts\activate
     pip install -r requirements-dev.txt
 
-Run the follow command periodically to update template's dependencies.
-
-    pcu ".\{{cookiecutter.name}}\requirements-dev.txt" -u
-
 ## Credits
 
 - [Logo][3] by [Andika .][4]
