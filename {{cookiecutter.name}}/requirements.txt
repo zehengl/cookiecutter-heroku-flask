@@ -2,4 +2,4 @@ Flask==3.0.3
 Flask-Bootstrap4==4.0.2
 Flask-WTF==1.2.1
 gunicorn==22.0.0
-whitenoise==6.6.0
+whitenoise==6.7.0
