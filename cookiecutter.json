@@ -5,6 +5,5 @@
   "copyright_year": "{% now 'utc', '%Y' %}",
   "url": "https://github.com/zehengl/cookiecutter-heroku-flask",
   "description": null,
-  "img": null,
   "_extensions": ["jinja2_time.TimeExtension"]
 }
