@@ -1,7 +1,3 @@
-<div align="center">
-    <img src="{{cookiecutter.img}}" alt="logo" height="196">
-</div>
-
 # {{cookiecutter.name}}
 
 ![coding_style](https://img.shields.io/badge/code%20style-black-000000.svg)
@@ -39,5 +35,3 @@
     python -m pip install -U pip
     pip install -r requirements.txt
     python app.py
-
-## Credits
